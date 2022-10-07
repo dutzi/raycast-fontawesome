@@ -42,7 +42,7 @@ export default function Command() {
       searchBarPlaceholder="Search Font Awesome icons"
     >
       {filteredList
-        .filter((group) => group.folder === 'light')
+        .filter((group) => group.folder === 'regular')
         .map((group) => (
           <Grid.Section key={group.folder} title={capitalCase(group.folder)}>
             {group.icons.map((icon) => (
@@ -52,6 +52,10 @@ export default function Command() {
                 actions={
                   <ActionPanel>
                     <Action title="Copy SVG" onAction={() => copySVG(group.folder, icon.filename)} />
+                    <Action.OpenInBrowser
+                      title="Open In Browser"
+                      url={`https://fontawesome.com/icons/${icon.filename.slice(0, -4)}?s=solid&f=classic`}
+                    />
                   </ActionPanel>
                 }
               />

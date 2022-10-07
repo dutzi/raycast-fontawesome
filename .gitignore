@@ -6,6 +6,18 @@
 # misc
 .DS_Store
 
-/assets/pngs
-/assets/svgs
+/assets/pngs/brands
+/assets/pngs/duotone
+/assets/pngs/light
+/assets/pngs/sharp-solid
+/assets/pngs/solid
+/assets/pngs/thin
+
+/assets/svgs/brands
+/assets/svgs/duotone
+/assets/svgs/light
+/assets/svgs/sharp-solid
+/assets/svgs/solid
+/assets/svgs/thin
+
 /src/icons.json
