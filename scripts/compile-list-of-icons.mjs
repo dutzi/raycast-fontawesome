@@ -1,11 +1,12 @@
 import { capitalCase } from 'change-case';
 import fs from 'fs/promises';
-import { folders } from './consts.mjs';
+import { folders, repoPath } from './consts.mjs';
 
 async function main() {
   const icons = [];
+  console.log('Compiling list of icons...');
   for (const folder of folders) {
-    const pngsPath = `/Users/dutzi/projects/raycast/font-awesome/pngs/${folder}`;
+    const pngsPath = `${repoPath}/assets/pngs/${folder}`;
     const files = await fs.readdir(pngsPath);
     icons.push({
       folder: folder,
